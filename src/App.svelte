@@ -1,9 +1,12 @@
 <script>
-  import "../node_modules/bulma/css/bulma.min.css"
-	export let name;
+ // import "../node_modules/bulma/css/bulma.min.css"
+  import BluetoothManager from "./BluetoothManager.svelte"
+  function handleNewValue(event) {
+    console.log('New value: ', event.detail.text)
+  }
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+  <h1>Welcome to the HEG Monitor!</h1>
+  <BluetoothManager on:value={handleNewValue}/>
 </main>
